@@ -1,8 +1,51 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/WCHp-cRl)
 # Projet "Dice" - Gestion de lancés de dés avec Spring Boot
 
+### Étudiant : 
+> **Mathéo Balazuc** 
+
+
 ## Description
 Le projet "Dice" est une application construite avec Spring Boot permettant de simuler des lancés de dés et de gérer un historique des résultats en base de données. Ce projet met en œuvre les concepts fondamentaux de Spring Boot, notamment l'injection de dépendances, les services RESTful, les entités JPA et les repositories.
+
+## Documentation API
+
+Le Swagger est configuré pour documenter les endpoints. Vous pouvez accéder à la documentation via le lien suivant :  [Swagger UI](http://localhost:8081/swagger-ui/index.html)
+
+```
+http://localhost:8081/swagger-ui/index.html
+```
+
+## Endpoints API
+
+- **`GET http://localhost:8081/rollDice`**  
+  Lance un seul dé et retourne le résultat.
+```
+http://localhost:8081/rollDice
+```
+
+- **`GET http://localhost:8081/rollDices/{X}`**  
+  Lance **X** dés (où **X** est un paramètre) et retourne les résultats.
+
+```
+  http://localhost:8081/rollDices/{X}
+```
+
+- **`GET http://localhost:8081/diceLogs`**  
+  Récupère l'historique complet des lancés de dés stockés en base de données.
+
+```
+http://localhost:8081/diceLogs
+```
+
+## Accès à la Base de données
+
+```
+http://localhost:8081/h2-console
+```
+
+Data Source URL : **`jdbc:h2:mem:devDB`**
+
 
 
 ## Étapes de réalisation
